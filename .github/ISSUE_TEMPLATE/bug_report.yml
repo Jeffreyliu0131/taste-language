@@ -1,0 +1,65 @@
+name: Bug report
+description: Report a reproducible defect in the local experience.
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting a defect. Never upload real or identifiable people, private or identifiable places, personal data, private photos, or images whose source or redistribution rights are unclear. Use the registered synthetic fixtures and redact private paths or logs.
+  - type: checkboxes
+    id: privacy_rights
+    attributes:
+      label: Privacy and rights check
+      options:
+        - label: I have not included real people, identifiable real places, personal data, private images, secrets, or rights-unclear media.
+          required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected area
+      options:
+        - Fixture loading or integrity
+        - Training or freeze
+        - Holdout prediction display
+        - Language comparison or axis editing
+        - Results, export, reset, or storage recovery
+        - Accessibility or responsive layout
+        - Build, tests, or CI
+        - Other in-scope behavior
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+      description: List exact steps, choices, viewport, and theme. Use only registered fixture IDs.
+      placeholder: "1. Start a new local session..."
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior and recovery state
+      description: Include sanitized error text. Do not paste private paths, exported notes, or secrets.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: "Node 22.x, browser/version, OS, viewport"
+    validations:
+      required: true
+  - type: checkboxes
+    id: evidence_boundary
+    attributes:
+      label: Evidence boundary
+      options:
+        - label: I understand that a prototype bug or fix does not validate demand, accuracy, real-place suitability, or production readiness.
+          required: true

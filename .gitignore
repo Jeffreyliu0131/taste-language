@@ -1,0 +1,72 @@
+# Dependencies and generated build output
+/node_modules/
+/dist/
+/coverage/
+/playwright-report/
+/test-results/
+/blob-report/
+.vite/
+*.tsbuildinfo
+
+# Local configuration, credentials, logs, and caches
+.env
+.env.*
+!.env.example
+*.local
+*.log
+logs/
+.cache/
+cache/
+.npm/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.pem
+*.key
+*.p12
+
+# Editor and operating-system files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Local exports and raw working material
+/taste-language-local-*.json
+/raw/
+/research/
+/data/raw/
+*.har
+*.trace
+
+# Internal governance and pre-publication source material
+/AGENTS.md
+/ASSUMPTIONS.md
+/DECISIONS.md
+/RISKS.md
+/STATUS.md
+/.agents/
+/.codex/
+
+# Internal gate packages, reviews, ADRs, specs, and spikes.
+# Only the curated decision record and stable implementation references below are public.
+/docs/*
+!/docs/DECISION_RECORD.md
+!/docs/implementation/
+/docs/implementation/*
+!/docs/implementation/ARCHITECTURE.md
+!/docs/implementation/CODE_SECURITY_REVIEW.md
+!/docs/implementation/FIXTURE_PROVENANCE.md
+/spikes/
+
+# Raw test evidence is local. Only four reviewed screenshots are public.
+/artifacts/*
+!/artifacts/screenshots/
+/artifacts/screenshots/*
+!/artifacts/screenshots/desktop-context.png
+!/artifacts/screenshots/mobile-pair-dark.png
+!/artifacts/screenshots/desktop-axis-review.png
+!/artifacts/screenshots/desktop-results.png

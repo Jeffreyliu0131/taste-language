@@ -1,0 +1,45 @@
+name: Scoped improvement
+description: Propose an improvement within the current photo-visible A′ boundary.
+title: "[Proposal] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Proposals must remain local-first and photo-visible. Do not attach real people, identifiable real places, personal data, private photos, scraped venue media, or any image with unclear consent, source, or redistribution rights.
+  - type: checkboxes
+    id: scope_rights
+    attributes:
+      label: Scope, privacy, and rights check
+      options:
+        - label: This proposal does not add real-place suitability, maps, 3D, Taste Galaxy, personality/sensitive inference, open-web scraping, analytics, or a hidden network dependency.
+          required: true
+        - label: I have not included real people, identifiable real places, personal data, private images, or rights-unclear media.
+          required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or failure case
+      description: Describe the observable problem without assuming a preferred solution.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: Explain how the change preserves freeze, abstention, editability, and the three separate records.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance and bad cases
+      description: State how the change can be tested and what must fail closed.
+    validations:
+      required: true
+  - type: textarea
+    id: tradeoffs
+    attributes:
+      label: Trade-offs and non-claims
+      description: Name added complexity, opportunity cost, and claims this change still cannot support.
+    validations:
+      required: true
